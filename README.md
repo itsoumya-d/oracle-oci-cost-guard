@@ -3,6 +3,8 @@
 Java 17 reference implementation for OCI cost governance: daily spend anomalies,
 tag coverage, forecast, budget burn and risk recommendations.
 
+![OCI Cost Guard dashboard](docs/dashboard.png)
+
 ## Why
 
 OCI cost surprises usually have two causes: untagged resources that cannot be
@@ -44,10 +46,11 @@ curl http://127.0.0.1:5181/api/cost-guard
 - Recommendations for spike review, tag enforcement, budget freeze, forecast
   review.
 
-## Reference fixtures
+## Verification
 
-The included six-day fixture produces a 42.43 z-score, 55.56% tag coverage,
-75% burn and a high-risk result, which exercises the intervention path.
+- 29 JUnit 5 tests.
+- Demo fixture: 20.45 z-score, 53.98% tag coverage, 26.26% burn, high risk.
+- Test fixture: 42.43 z-score, 55.56% tag coverage, 75% burn, high risk.
 
 ## Scope
 
